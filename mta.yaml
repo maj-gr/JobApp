@@ -10,6 +10,8 @@ modules:
       disk-quota: 512M
     requires:
       - name: JobApp-db-hdi-container
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
   - name: srv
     type: nodejs
     path: srv
