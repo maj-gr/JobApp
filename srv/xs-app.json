@@ -1,6 +1,6 @@
 {
 	"welcomeFile": "/catalog/sleep()",
-	"authenticationMethod": "none",
+	"authenticationMethod": "route",
 	"routes": [{
 		"source": "/catalog/(.*)",
 		"destination": "srv_api"

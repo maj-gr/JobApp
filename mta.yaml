@@ -36,4 +36,5 @@ resources:
     type: com.sap.xs.uaa-space
     parameters:
       path: ./xs-security.json
+      service-plan: space
 description: Demo
