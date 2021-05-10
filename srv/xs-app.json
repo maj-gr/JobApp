@@ -1,0 +1,14 @@
+{
+	"welcomeFile": "/catalog/sleep()",
+	"authenticationMethod": "none",
+	"routes": [{
+		"source": "/catalog/(.*)",
+		"destination": "srv_api"
+	},{
+		"source": "/odata/v4/(.*)",
+		"destination": "srv_api"
+	}, {
+		"source": "/node(.*)",
+		"destination": "srv_api"
+	}]
+}

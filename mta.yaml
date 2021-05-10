@@ -23,58 +23,16 @@ modules:
           url: '${default-url}'
     requires:
       - name: JobApp-db-hdi-container
-      - name: db
-      - name: JobApp-uaa
-  - name: web
-    type: html5
-    path: web
-    parameters:
-      disk-quota: 512M
-      memory: 256M
-    build-parameters:
-      builder: grunt
-    requires:
-      - name: JobApp-uaa
-      - name: xsjs_api
-        group: destinations
-        properties:
-          name: xsjs_api
-          url: '~{url}'
-          forwardAuthToken: true
-      - name: srv_api
-        group: destinations
-        properties:
-          name: srv_api
-          url: '~(url}'
-          forwardAuthToken: true
-  - name: xsjs
-    type: nodejs
-    path: xsjs
-    provides:
-      - name: xsjs_api
-        properties:
-          url: '${default-url}'
-    requires:
-      - name: JobApp-db-hdi-container
-      - name: db
-      - name: JobApp-uaa
-    parameters: {}
 resources:
   - name: JobApp-db-hdi-container
     type: com.sap.xs.hdi-container
     properties:
       hdi-container-name: '${service-name}'
+    parameters:
+      service: hana
+      service-plan: hdi-shared
   - name: JobApp-uaa
+    type: com.sap.xs.uaa-space
     parameters:
       path: ./xs-security.json
-    type: com.sap.xs.uaa-space
-    properties:
-      service: '${service-name}'
-  - name: hdi_user_db
-    parameters:
-      config:
-        schema: JOBAPP_USER
-    properties:
-      user-container-name: '${service-name}'
-    type: com.sap.xs.hdi-container
 description: Demo
