@@ -23,6 +23,7 @@ modules:
           url: '${default-url}'
     requires:
       - name: JobApp-db-hdi-container
+      - name: JobApp-uaa
 resources:
   - name: JobApp-db-hdi-container
     type: com.sap.xs.hdi-container
