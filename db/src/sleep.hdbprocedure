@@ -5,5 +5,4 @@ PROCEDURE "sleep" ( )
    AS
 BEGIN
  CALL "DPA_Initial_SP"();
- CALL "MOVE_CSV"(PATH => 'D:\PDM\Staging\Config\move.bat', PARAM => ''/*<NVARCHAR(1024)>*/, FLAG => 3, PARAM_3 => ?);
 END

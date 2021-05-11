@@ -1,0 +1,8 @@
+{
+	"HIST_DATA_TEST": {
+    "target": {
+      "object": "HIST_DATA",
+      "schema": "MOHPDM"
+    }
+  }
+}
