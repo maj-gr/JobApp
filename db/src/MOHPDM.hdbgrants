@@ -1,0 +1,14 @@
+{
+    "grant-service": {
+        "object_owner": {
+            "roles": [
+                "MOHPDM::external_access_g"
+            ]
+        },
+        "application_user": {
+            "roles": [
+                "MOHPDM::external_access"
+            ]
+        }
+    }
+}

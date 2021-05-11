@@ -1,5 +1,5 @@
 {
-	"welcomeFile": "/catalog/sleep()",
+	"welcomeFile": "server.js",
 	"authenticationMethod": "route",
 	"routes": [{
 		"source": "/catalog/(.*)",

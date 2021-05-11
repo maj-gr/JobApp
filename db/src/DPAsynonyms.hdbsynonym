@@ -1,0 +1,14 @@
+{
+  "HIST_DATA": {
+    "target": {
+      "object": "HIST_DATA_TEST",
+      "schema": "MOHPDM"
+    }
+  },
+  "MOVE_CSV": {
+    "target": {
+      "object": "FILEADAPTER_EXEC",
+      "schema": "DPA_ADMIN"
+    }
+  }
+}

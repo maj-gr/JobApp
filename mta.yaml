@@ -12,11 +12,13 @@ modules:
       - name: JobApp-db-hdi-container
         properties:
           TARGET_CONTAINER: '~{hdi-container-name}'
-  - name: srv
+      - name: grant-service
+
+  - name: JobApp-srv
     type: nodejs
     path: srv
     parameters:
-      memory: 512M
+      memory: 128M
     provides:
       - name: srv_api
         properties:
@@ -24,6 +26,7 @@ modules:
     requires:
       - name: JobApp-db-hdi-container
       - name: JobApp-uaa
+
 resources:
   - name: JobApp-db-hdi-container
     type: com.sap.xs.hdi-container
@@ -32,9 +35,16 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+
   - name: JobApp-uaa
     type: com.sap.xs.uaa-space
     parameters:
       path: ./xs-security.json
-      service-plan: space
+      service-plan: broker
+
+  - name: grant-service
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: grant-service
+
 description: Demo
