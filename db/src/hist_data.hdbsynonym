@@ -1,0 +1,8 @@
+{
+	"HISTORICAL": {
+    "target": {
+      "object": "HIST_DATA",
+      "schema": "MOHPDM"
+    }
+  }
+}
